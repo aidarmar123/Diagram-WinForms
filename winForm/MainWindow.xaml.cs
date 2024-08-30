@@ -25,6 +25,7 @@ namespace winForm
         public MainWindow()
         {
             InitializeComponent();
+            
             var points = App.DB.PostSeason.Where(x=>x.SeasonId==1).ToList();
             var areas = winForm.ChartAreas.Add("pointArea");
             var sears = winForm.Series.Add("pointColumn");
